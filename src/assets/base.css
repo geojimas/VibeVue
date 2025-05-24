@@ -1,14 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 @import "tailwindcss";
 
 @plugin "daisyui" {
   themes: light --default, dark;
 }
 
-
 body {
-  font-family: "Karla", sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
-  font-style: normal;
 }
