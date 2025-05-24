@@ -1,19 +1,16 @@
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
 
 export function useTheme() {
-    const currentTheme = ref('light')
+  const savedTheme = localStorage.getItem('theme') || 'light'
+  const currentTheme = ref(savedTheme)
 
-    const toggleTheme = () => {
-        currentTheme.value = currentTheme.value === 'light' ? 'dark' : 'light'
-        document.documentElement.setAttribute('data-theme', currentTheme.value)
-        localStorage.setItem('theme', currentTheme.value)
-    }
+  document.documentElement.setAttribute('data-theme', currentTheme.value)
 
-    onMounted(() => {
-        const savedTheme = localStorage.getItem('theme') || 'light'
-        currentTheme.value = savedTheme
-        document.documentElement.setAttribute('data-theme', savedTheme)
-    })
+  const toggleTheme = () => {
+    currentTheme.value = currentTheme.value === 'light' ? 'dark' : 'light'
+    document.documentElement.setAttribute('data-theme', currentTheme.value)
+    localStorage.setItem('theme', currentTheme.value)
+  }
 
-    return { currentTheme, toggleTheme }
+  return { currentTheme, toggleTheme }
 }

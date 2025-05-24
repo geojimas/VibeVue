@@ -1,24 +1,28 @@
 <script setup>
+  import { computed } from 'vue'
   import { useTheme } from '../composables/useTheme'
 
   const { currentTheme, toggleTheme } = useTheme()
+
+  // Use computed to make checkbox binding boolean
+  const isDark = computed(() => currentTheme.value === 'dark')
 </script>
 
 <template>
-  <label class="flex cursor-pointer gap-2">
+  <label class="flex cursor-pointer gap-2 items-center">
     <img
       src="../assets/light.svg"
-      alt="img"
+      alt="Light theme"
     >
     <input
       type="checkbox"
-      :value="currentTheme"
+      :checked="isDark"
       class="toggle theme-controller"
       @change="toggleTheme"
     >
     <img
       src="../assets/dark.svg"
-      alt="img"
+      alt="Dark theme"
     >
   </label>
 </template>
