@@ -1,5 +1,4 @@
-[![MIT License](https://img.shields.io/badge/license-MIT-green.svg)]
-(https://opensource.org/licenses/MIT)
+![MIT License](https://img.shields.io/badge/license-MIT-green.svg)
 
 # Vue 3 + Vite Starter Template
 
@@ -7,6 +6,7 @@ This template is a solid foundation to build Vue 3 apps quickly using Vite. It i
 
 * **Vue 3** with `<script setup>` SFCs for a clean and modern syntax
 * **Vite** for lightning-fast dev server and build
+* **Vitest** for components unit testing (the official Vitest)
 * **Tailwind CSS** + **DaisyUI** for utility-first styling and prebuilt UI components
 * **Pinia** for state management (the official Vue store)
 * **Vue Router** for SPA routing
@@ -29,23 +29,18 @@ This template is a solid foundation to build Vue 3 apps quickly using Vite. It i
 
 ### Prerequisites
 
-* Node.js
-* npm or yarn
+* Node.js & npm
 
 ### Install dependencies
 
 ```bash
 npm install
-# or
-yarn
 ```
 
 ### Run development server
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
 Open your browser at [http://localhost:5173](http://localhost:5173) to start coding.
@@ -54,47 +49,18 @@ Open your browser at [http://localhost:5173](http://localhost:5173) to start cod
 
 ```bash
 npm run build
-# or
-yarn build
 ```
 
 ---
 
-## Project Structure
-
-```
-src/
- ├── assets/            # Static assets like images and styles
- ├── components/        # Vue components
- ├── router/            # Vue Router setup
- ├── store/             # Pinia store
- ├── views/             # Page components for routes
- └── App.vue            # Root component
-vite.config.js          # Vite config
-eslint.config           # ESLint config
-```
+## Performance
+![Performance](/seo.png)
 
 ---
 
 ## ESLint & Formatting
 * Vue 3 specific rules enabled
 * Supports autofixing on save in editors like VSCode
-
-Make sure your IDE is set up to use ESLint autofix on save for best experience.
-
----
-
-## Learn More
-
-* [Vue 3 Documentation](https://vuejs.org)
-* [Vite Documentation](https://vitejs.dev)
-* [Tailwind CSS](https://tailwindcss.com)
-* [DaisyUI](https://daisyui.com)
-* [Pinia State Management](https://pinia.vuejs.org)
-* [Vue Router](https://router.vuejs.org)
-* [ESLint Vue Plugin](https://eslint.vuejs.org)
-
----
 
 ## Contributing
 
