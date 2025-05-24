@@ -1,10 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 @import "tailwindcss";
 
 @plugin "daisyui" {
   themes: light --default, dark;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 
 body {
   font-family: "Karla", sans-serif;

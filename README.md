@@ -10,6 +10,7 @@ This template is a solid foundation to build Vue 3 apps quickly using Vite. It i
 * **Tailwind CSS** + **DaisyUI** for utility-first styling and prebuilt UI components
 * **Pinia** for state management (the official Vue store)
 * **Vue Router** for SPA routing
+* **PWA** PWA support Feature
 * **ESLint** configured for consistent code style and quality
 
 ---
