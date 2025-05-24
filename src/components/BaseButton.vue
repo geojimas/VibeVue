@@ -13,7 +13,7 @@
 </script>
 
 <template>
-  <button class="btn btn-outline btn-primary">
+  <button class="btn btn-outline text-xs md:text-xl btn-primary">
     {{ label }}
   </button>
 </template>

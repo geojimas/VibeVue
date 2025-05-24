@@ -24,13 +24,13 @@
             role="alert"
             class="alert alert-warning mr-5"
           >
-            <span class="text-2xl font-bold">Count : {{ count }}</span>
+            <span class="text-xl font-bold">Count : {{ count }}</span>
           </div>
           <div
             role="alert"
             class="alert alert-success"
           >
-            <span class="text-2xl font-bold">Double Count :{{ doubleCount }}</span>
+            <span class="text-xl font-bold">Double Count :{{ doubleCount }}</span>
           </div>
         </div>
       </div>

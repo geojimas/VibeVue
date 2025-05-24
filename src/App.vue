@@ -4,7 +4,7 @@
 </script>
 
 <template>
-  <div>
+  <div class="animate__animated animate__fadeIn">
     <HeaderSection />
     <RouterView />
   </div>
