@@ -13,12 +13,17 @@
       src="../assets/light.svg"
       alt="Light theme"
     >
-    <input
-      type="checkbox"
-      :checked="isDark"
-      class="toggle theme-controller"
-      @change="toggleTheme"
-    >
+    <form>
+      <label for="toggleTheme" />
+      <input
+        id="toggleTheme"
+        type="checkbox"
+        :checked="isDark"
+        class="toggle theme-controller"
+        @change="toggleTheme"
+      >
+    </form>
+
     <img
       src="../assets/dark.svg"
       alt="Dark theme"
