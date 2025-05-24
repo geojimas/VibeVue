@@ -9,7 +9,7 @@ export default [
   {
     rules: {
       // override/add rules settings here, such as:
-      
+
       // Additional Vue 3 specific rules
       'vue/multi-word-component-names': 'off', // Disable the rule that requires multi-word component names in Vue
       'vue/component-api-style': ['error', ['script-setup', 'composition']], // Enforce specific API style for Vue components
@@ -37,6 +37,8 @@ export default [
       'no-console': 'warn', // Warn about console.log (disable in production builds)
       'no-debugger': 'error', // Disallow debugger statements
       'eqeqeq': ['error', 'always'], // Enforce === and !==
+      'space-infix-ops': ['error', { int32Hint: false }], // spaces specifically around the = in variable declarations
+      'operator-linebreak': ['error', 'after'],
       'no-var': 'error', // Disallow var, enforce let/const
       'prefer-const': 'error', // Use const where possible
       'arrow-spacing': ['error', { before: true, after: true }], // Consistent spacing around =>
