@@ -4,7 +4,6 @@
 
   const { currentTheme, toggleTheme } = useTheme()
 
-  // Use computed to make checkbox binding boolean
   const isDark = computed(() => currentTheme.value === 'dark')
 </script>
 

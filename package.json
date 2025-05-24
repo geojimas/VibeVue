@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --host",
+    "dev": "vite",
     "lint": "eslint . --fix",
     "build": "vite build",
     "unit": "vitest",
@@ -26,7 +26,6 @@
     "eslint-plugin-vue": "^10.1.0",
     "jsdom": "^26.1.0",
     "vite": "^5.4.8",
-    "vite-plugin-vue-devtools": "^7.7.6",
     "vitest": "^3.1.4"
   }
 }
