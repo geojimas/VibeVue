@@ -1,6 +1,7 @@
 <script setup>
   import { storeToRefs } from 'pinia'
   import { useCounterStore } from '../store/counter'
+  import BaseButton from '../components/BaseButton.vue'
 
   const counterStore = useCounterStore()
 
@@ -34,12 +35,11 @@
           </div>
         </div>
       </div>
-      <button
-        class="btn btn-neutral"
+      <BaseButton
+        label="Click me"
+        theme="warning"
         @click="increment"
-      >
-        Increment
-      </button>
+      />
     </div>
   </div>
 </template>

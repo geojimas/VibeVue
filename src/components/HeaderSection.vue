@@ -12,13 +12,19 @@
       class="mx-4"
       to="/"
     >
-      <BaseButton label="Primary Page" />
+      <BaseButton
+        theme="accent"
+        label="Primary Page"
+      />
     </RouterLink>
     <RouterLink
       class="mx-4"
       to="/second-page"
     >
-      <BaseButton label="Secondary Page" />
+      <BaseButton
+        theme="accent"
+        label="Secondary Page"
+      />
     </RouterLink>
     <ThemeToggle class="mx-4" />
   </nav>

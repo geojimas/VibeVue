@@ -1,7 +1,8 @@
 
 <script setup>
   import { useTemplateRef } from 'vue'
-
+  import BaseButton from './BaseButton.vue'
+ 
   const modalRef = useTemplateRef('base_modal')
 
   function HandleModalClick() {
@@ -12,13 +13,11 @@
 
 
 <template>
-  <button
-    class="btn"
+  <BaseButton
+    label="Open Modal"
+    theme="info"
     @click="HandleModalClick"
-  >
-    open modal
-  </button>
-
+  />
   <dialog
     ref="base_modal"
     class="modal"

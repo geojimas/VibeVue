@@ -28,6 +28,7 @@ export default [
       'vue/script-indent': ['error', 2, { baseIndent: 1 }], // Enforce consistent indentation for script tags
       'vue/v-on-event-hyphenation': ['error', 'always', { autofix: true }], // Enforce hyphenation for event names in templates
       'vue/valid-define-props': 'error', // Ensure props definitions are valid
+      'vue/require-prop-types': 'error',
       'vue/valid-v-memo': 'error', // Ensure usage of valid v-memo directive
       'vue/no-v-html': 'warn', // Warn about using v-html due to XSS risk
       'vue/attribute-hyphenation': ['error', 'always'], // Enforce kebab-case in HTML attributes

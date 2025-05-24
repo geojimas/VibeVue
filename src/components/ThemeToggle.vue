@@ -1,6 +1,8 @@
 <script setup>
   import { computed } from 'vue'
   import { useTheme } from '../composables/useTheme'
+  import SunSVG from './SunSVG.vue'
+  import MoonSVG from './MoonSVG.vue'
 
   const { currentTheme, toggleTheme } = useTheme()
 
@@ -9,10 +11,7 @@
 
 <template>
   <label class="flex cursor-pointer gap-2 items-center">
-    <img
-      src="../assets/light.svg"
-      alt="Light theme"
-    >
+    <SunSVG />
     <form>
       <label for="toggleTheme" />
       <input
@@ -23,10 +22,6 @@
         @change="toggleTheme"
       >
     </form>
-
-    <img
-      src="../assets/dark.svg"
-      alt="Dark theme"
-    >
+    <MoonSVG />
   </label>
 </template>
