@@ -12,12 +12,6 @@
 <template>
   <div class="hero bg-base-500 h-screen">
     <div class="hero-content flex justify-center items-center flex-col lg:flex-row">
-      <img
-        loading="lazy"
-        src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
-        class="max-w-sm rounded-lg shadow-2xl"
-        alt="logo"
-      >
       <div>
         <h1 class="text-5xl font-bold">
           Second Page
