@@ -11,35 +11,31 @@
 </script>
 
 <template>
-  <div class="hero bg-base-500 h-screen">
-    <div class="hero-content flex justify-center items-center flex-col lg:flex-row">
-      <div>
-        <h1 class="text-5xl font-bold">
-          Second Page
-        </h1>
-        <p class="py-6 text-2xl">
-          This is the second page , interact with Pinia Store
-        </p>
-        <div class="flex flex-row text-center ">
-          <div
-            role="alert"
-            class="alert alert-warning mr-5"
-          >
-            <span class="text-xl font-bold">Count : {{ count }}</span>
-          </div>
-          <div
-            role="alert"
-            class="alert alert-success"
-          >
-            <span class="text-xl font-bold">Double Count :{{ doubleCount }}</span>
+  <div class="hero bg-base-200 flex-1 overflow-auto">
+    <div class="hero-content flex-col lg:flex-row">
+      <div class="card bg-base-100 max-w-88 shadow-sm">
+        <div class="card-body gap-9">
+          <h2 class="card-title flex justify-center text-3xl">
+            Second Page
+          </h2>
+          <BaseButton
+            label="Click me"
+            theme="info"
+            @click="increment"
+          />
+          <p class="text-xl">
+            Interact with Pinia Store
+          </p>
+          <div class="card-actions justify-end">
+            <div class="badge badge-outline badge-error">
+              <span class="text-lg">Count : {{ count }}</span>
+            </div>
+            <div class="badge badge-outline badge-warning">
+              <span class="text-lg">Double Count :{{ doubleCount }}</span>
+            </div>
           </div>
         </div>
       </div>
-      <BaseButton
-        label="Click me"
-        theme="warning"
-        @click="increment"
-      />
     </div>
   </div>
 </template>

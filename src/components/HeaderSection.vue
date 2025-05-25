@@ -7,13 +7,13 @@
 
 
 <template>
-  <nav class="flex justify-center items-center flex-row p-4">
+  <nav class="flex justify-center items-center flex-row p-2">
     <RouterLink
       class="mx-4"
       to="/"
     >
       <BaseButton
-        theme="accent"
+        theme="info"
         label="Primary Page"
       />
     </RouterLink>
@@ -22,7 +22,7 @@
       to="/second-page"
     >
       <BaseButton
-        theme="accent"
+        theme="info"
         label="Secondary Page"
       />
     </RouterLink>

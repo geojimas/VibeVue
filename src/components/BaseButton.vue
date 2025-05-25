@@ -1,9 +1,9 @@
-
 <script setup>
   import { toRefs, computed } from 'vue'
+  import Constants from '../constants/index.js'
 
   defineOptions({
-    inheritAttrs: true
+    inheritAttrs: true,
   })
 
   const props = defineProps({
@@ -13,22 +13,21 @@
     },
     theme: {
       type: String,
-      default: '',
+      default: 'none',
       validator: value =>
-        ['', 'primary', 'secondary', 'accent', 'info', 'success', 'warning', 'error'].includes(value),
-    }
+        Constants.AVAILABLE_COLORS.includes(value),
+    },
   })
   const { label, theme } = toRefs(props)
 
-  const themeClass = computed(() => {
-    return theme.value || ''
-  })
+  const themeClass = computed(() => Constants.COLOR_VARIANTS[theme.value] || '')
 
 </script>
 
 <template>
   <button
-    :class="`btn btn-${themeClass} btn-outline text-xs md:text-xl`"
+    class="btn btn-outline text-xs md:text-lg"
+    :class="themeClass"
     v-bind="$attrs"
   >
     {{ label }}

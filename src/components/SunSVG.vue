@@ -2,8 +2,8 @@ pnpm add -D @iconify-json/openmoji
 <template>
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="2em"
-    height="2em"
+    width="1.5em"
+    height="1.5em"
     viewBox="0 0 72 72"
   ><!-- Icon from OpenMoji by OpenMoji - https://creativecommons.org/licenses/by-sa/4.0/ --><path
     fill="#FCEA2B"

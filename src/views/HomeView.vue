@@ -3,10 +3,10 @@
 </script>
 
 <template>
-  <div class="hero bg-base-200 h-screen">
-    <div class="hero-content flex flex-col text-center">
+  <div class="hero bg-base-200 flex-1 overflow-auto">
+    <div class="hero-content text-center flex-col">
       <div class="max-w-md">
-        <h1 class="text-5xl font-bold">
+        <h1 class="text-4xl font-bold">
           Hello there
         </h1>
         <p class="py-6">
