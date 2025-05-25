@@ -1,8 +1,8 @@
 <script setup>
   import { computed } from 'vue'
   import { useTheme } from '../composables/useTheme'
-  import SunSVG from './SunSVG.vue'
-  import MoonSVG from './MoonSVG.vue'
+  import SunSVG from '../assets/SunSVG.vue'
+  import MoonSVG from '../assets/MoonSVG.vue'
 
   const { currentTheme, toggleTheme } = useTheme()
 
