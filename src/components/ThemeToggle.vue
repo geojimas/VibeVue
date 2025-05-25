@@ -10,10 +10,11 @@
 </script>
 
 <template>
-  <label class="flex cursor-pointer gap-2 items-center">
+  <div class="flex cursor-pointer gap-2 items-center">
     <SunSVG />
-    <form>
-      <label for="toggleTheme" />
+    <label
+      for="toggleTheme"
+    >
       <input
         id="toggleTheme"
         type="checkbox"
@@ -21,7 +22,7 @@
         class="toggle theme-controller"
         @change="toggleTheme"
       >
-    </form>
+    </label>
     <MoonSVG />
-  </label>
+  </div>
 </template>

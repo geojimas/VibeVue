@@ -18,6 +18,11 @@
         Constants.AVAILABLE_COLORS.includes(value),
     },
   })
+
+  
+  defineEmits(['click'])
+
+
   const { label, theme } = toRefs(props)
 
   const themeClass = computed(() => Constants.COLOR_VARIANTS[theme.value] || '')
@@ -28,7 +33,7 @@
   <button
     class="btn btn-outline text-xs md:text-lg"
     :class="themeClass"
-    v-bind="$attrs"
+    @click="$emit('click')"
   >
     {{ label }}
   </button>

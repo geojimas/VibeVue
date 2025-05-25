@@ -1,11 +1,10 @@
-
 <template>
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="1.5em"
     height="1.5em"
     viewBox="0 0 72 72"
-  ><!-- Icon from OpenMoji by OpenMoji - https://creativecommons.org/licenses/by-sa/4.0/ --><path
+  ><path
     fill="#FCEA2B"
     d="M7.363 42.41c4.553 6.17 11.874 10.172 20.13 10.172c13.808 0 25-11.193 25-25c0-8.523-4.264-16.05-10.776-20.562C54.756 9.858 64.5 21.463 64.5 35.352c0 16.016-12.984 29-29 29c-13.588 0-24.99-9.33-28.136-21.943"
   /><path
