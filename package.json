@@ -1,10 +1,10 @@
 {
   "name": "vue3-starter",
   "private": true,
-  "version": "1.0.0",
+  "version": "2.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "lint": "eslint . --fix",
     "build": "vite build --debug",
     "unit": "vitest",

@@ -7,6 +7,7 @@ This template is a solid foundation to build Vue 3 apps quickly using Vite. It i
 * **Vue 3** with `<script setup>` SFCs for a clean and modern syntax
 * **Vite** for lightning-fast dev server and build
 * **Vitest** for components unit testing (the official Vitest)
+* **Vue-I18n** for components Localization (the official)
 * **Tailwind CSS** + **DaisyUI** for utility-first styling and prebuilt UI components
 * **Pinia** for state management (the official Vue store)
 * **Vue Router** for SPA routing
@@ -44,7 +45,7 @@ npm install
 npm run dev
 ```
 
-Open your browser at [http://localhost:5173](http://localhost:5173) to start coding.
+Open your browser to start coding.
 
 ### Build for production
 
