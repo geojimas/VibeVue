@@ -13,17 +13,17 @@
       to="/"
     >
       <BaseButton
-        theme="info"
-        label="Primary Page"
+        theme="warning"
+        label="Home"
       />
     </RouterLink>
     <RouterLink
       class="mx-4"
-      to="/second-page"
+      to="/about"
     >
       <BaseButton
-        theme="info"
-        label="Secondary Page"
+        theme="warning"
+        label="Store"
       />
     </RouterLink>
     <ThemeToggle class="mx-4" />

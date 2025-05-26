@@ -55,7 +55,7 @@ npm run build
 ---
 
 ## Performance
-![Performance](/seo.png)
+![Performance](./diagnose.png)
 
 ---
 

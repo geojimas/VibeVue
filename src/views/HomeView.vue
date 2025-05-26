@@ -19,7 +19,7 @@
     <div class="hero-content text-center flex-col">
       <div class="max-w-md">
         <h1 class="text-4xl font-bold">
-          Hello there
+          Main page
         </h1>
         <p class="py-4">
           Project Starter 

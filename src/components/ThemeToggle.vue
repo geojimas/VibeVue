@@ -6,7 +6,7 @@
 
   const { currentTheme, toggleTheme } = useTheme()
 
-  const isDark = computed(() => currentTheme.value === 'dark')
+  const isDarkTheme = computed(() => currentTheme.value === 'dark')
 </script>
 
 <template>
@@ -18,7 +18,7 @@
       <input
         id="toggleTheme"
         type="checkbox"
-        :checked="isDark"
+        :checked="isDarkTheme"
         class="toggle theme-controller"
         @change="toggleTheme"
       >

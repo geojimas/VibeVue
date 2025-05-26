@@ -3,7 +3,7 @@
 
 
 <template>
-  <div class="text-sm p-4 text-center">
+  <div class="text-sm p-4 text-center lg:text-lg">
     Copyright &#169; {{ new Date().getFullYear() }} by Dimitris Georgiadis, All Rights reserved.
   </div>
 </template>

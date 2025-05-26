@@ -20,7 +20,7 @@
           </h2>
           <BaseButton
             label="Click me"
-            theme="info"
+            theme="primary"
             @click="increment"
           />
           <p class="text-xl">
