@@ -3,6 +3,7 @@
   import BaseButton from './BaseButton.vue'
   import { RouterLink } from 'vue-router'
   import ThemeToggle from './ThemeToggle.vue'
+  import SwitchLanguage from './SwitchLanguage.vue'
 </script>
 
 
@@ -14,7 +15,7 @@
     >
       <BaseButton
         theme="success"
-        label="Home"
+        :label="$t('nav.main')"
       />
     </RouterLink>
     <RouterLink
@@ -23,10 +24,11 @@
     >
       <BaseButton
         theme="success"
-        label="Store"
+        :label="$t('nav.second')"
       />
     </RouterLink>
     <ThemeToggle class="mx-4" />
+    <SwitchLanguage />
   </nav>
 </template>
 

@@ -14,7 +14,7 @@
 
 <template>
   <BaseButton
-    label="Open Modal"
+    :label="$t('home.modal.label')"
     theme="info"
     @click="HandleModalClick"
   />
@@ -29,10 +29,10 @@
         </button>
       </form>
       <h3 class="text-lg font-bold">
-        Hello!
+        {{ $t('home.modal.header') }}
       </h3>
       <p class="py-4">
-        Press ESC key or click on ✕ button to close
+        {{ $t('home.modal.content') }}
       </p>
     </div>
   </dialog>

@@ -6,6 +6,7 @@
     'Vue Router',
     'Pinia',
     'Vitest',
+    'vue-i18n',
     'ESLint',
     'Tailwind CSS',
     'DaisyUI',
@@ -18,11 +19,11 @@
   <div class="hero bg-base-200 flex-1 overflow-auto">
     <div class="hero-content text-center flex-col">
       <div class="max-w-md">
-        <h1 class="text-4xl font-bold">
-          Main page
+        <h1 class="text-xl font-bold">
+          {{ $t('home.page') }}
         </h1>
-        <p class="py-4">
-          Project Starter 
+        <p class="py-4 text-md">
+          {{ $t('home.template') }}
         </p>
         <ul class="flex flex-wrap justify-center items-center py-2 text-md gap-2">
           <li

@@ -19,7 +19,7 @@
         id="toggleTheme"
         type="checkbox"
         :checked="isDarkTheme"
-        class="toggle theme-controller"
+        class="toggle toggle-md"
         @change="toggleTheme"
       >
     </label>

@@ -16,22 +16,22 @@
       <div class="card bg-base-100 max-w-88 shadow-sm">
         <div class="card-body gap-9">
           <h2 class="card-title flex justify-center text-3xl">
-            Second Page
+            {{ $t('second.page') }}
           </h2>
           <BaseButton
-            label="Click me"
+            :label="$t('second.store_click')"
             theme="primary"
             @click="increment"
           />
           <p class="text-xl">
-            Interact with Pinia Store
+            {{ $t('second.header') }}
           </p>
           <div class="card-actions justify-end">
             <div class="badge badge-outline badge-error">
-              <span class="text-lg">Count : {{ count }}</span>
+              <span class="text-lg"> {{ $t('second.counter') }} : {{ count }}</span>
             </div>
             <div class="badge badge-outline badge-warning">
-              <span class="text-lg">Double Count :{{ doubleCount }}</span>
+              <span class="text-lg">{{ $t('second.double_counter') }} :{{ doubleCount }}</span>
             </div>
           </div>
         </div>
