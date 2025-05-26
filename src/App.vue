@@ -1,3 +1,11 @@
+<template>
+  <div class="flex flex-col h-screen">
+    <HeaderSection v-if="!route.meta.hideLayout" />
+    <RouterView />
+    <FooterSection v-if="!route.meta.hideLayout" />
+  </div>
+</template>
+
 <script setup>
 
   import { RouterView } from 'vue-router'
@@ -8,12 +16,3 @@
   const route = useRoute()
 
 </script>
-
-<template>
-  <div class="flex flex-col h-screen">
-    <HeaderSection v-if="!route.meta.hideLayout" />
-    <RouterView />
-    <FooterSection v-if="!route.meta.hideLayout" />
-  </div>
-</template>
-

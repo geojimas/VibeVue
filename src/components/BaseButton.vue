@@ -1,3 +1,14 @@
+<template>
+  <button
+    class="btn btn-outline text-xs md:text-lg"
+    :class="themeClass"
+    @click="$emit('click')"
+  >
+    {{ label }}
+  </button>
+</template>
+
+
 <script setup>
   import { toRefs, computed } from 'vue'
   import Constants from '../constants/index.js'
@@ -19,23 +30,11 @@
     },
   })
 
-  
   defineEmits(['click'])
-
 
   const { label, theme } = toRefs(props)
 
   const themeClass = computed(() => Constants.COLOR_VARIANTS[theme.value] || '')
 
 </script>
-
-<template>
-  <button
-    class="btn btn-outline text-xs md:text-lg"
-    :class="themeClass"
-    @click="$emit('click')"
-  >
-    {{ label }}
-  </button>
-</template>
 

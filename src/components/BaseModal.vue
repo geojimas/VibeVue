@@ -1,17 +1,3 @@
-
-<script setup>
-  import { useTemplateRef } from 'vue'
-  import BaseButton from './BaseButton.vue'
- 
-  const modalRef = useTemplateRef('base_modal')
-
-  function HandleModalClick() {
-    modalRef.value.showModal()
-  }
-</script>
-
-
-
 <template>
   <BaseButton
     :label="$t('home.modal.label')"
@@ -38,3 +24,13 @@
   </dialog>
 </template>
 
+<script setup>
+  import { useTemplateRef } from 'vue'
+  import BaseButton from './BaseButton.vue'
+ 
+  const modalRef = useTemplateRef('base_modal')
+
+  function HandleModalClick() {
+    modalRef.value.showModal()
+  }
+</script>

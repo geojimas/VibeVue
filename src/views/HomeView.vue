@@ -1,20 +1,3 @@
-<script setup>
-  import BaseModal from '../components/BaseModal.vue'
-
-  const tools = [
-    'Vue 3',
-    'Vue Router',
-    'Pinia',
-    'Vitest',
-    'vue-i18n',
-    'ESLint',
-    'Tailwind CSS',
-    'DaisyUI',
-    'Progressive Web App (PWA) Support',
-    'Search Engine Optimization (SEO)',
-  ]
-</script>
-
 <template>
   <div class="hero bg-base-200 flex-1 overflow-auto">
     <div class="hero-content text-center flex-col">
@@ -38,3 +21,20 @@
     </div>
   </div>
 </template>
+
+<script setup>
+  import BaseModal from '../components/BaseModal.vue'
+
+  const tools = [
+    'Vue 3',
+    'Vue Router',
+    'Pinia',
+    'Vitest',
+    'vue-i18n',
+    'ESLint',
+    'Tailwind CSS',
+    'DaisyUI',
+    'Progressive Web App (PWA) Support',
+    'Search Engine Optimization (SEO)',
+  ]
+</script>

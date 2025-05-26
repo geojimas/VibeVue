@@ -1,11 +1,11 @@
-import { describe, it, expect } from 'vitest'
+import { describe, test, expect } from 'vitest'
 
 import { mount } from '@vue/test-utils'
 import BaseButton from './BaseButton.vue'
 
 describe('In BaseButton Component', () => {
 
-  it('renders properly', () => {
+  test('renders properly', () => {
     const wrapper = mount(BaseButton, {
       props: {
         label: 'Click Me',
@@ -15,7 +15,7 @@ describe('In BaseButton Component', () => {
     expect(wrapper.text()).toContain('Click Me')
   })
 
-  it('emits a click event when clicked', async () => {
+  test('emits a click event when clicked', async () => {
     const wrapper = mount(BaseButton, {
       props: {
         label: 'Click Me',

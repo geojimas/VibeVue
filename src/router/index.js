@@ -10,17 +10,13 @@ const router = createRouter({
       path: '/',
       name: 'Home',
       component: HomeView,
-      meta: {
-        requiresGuest: true
-      }
+      meta: { requiresGuest: true }
     },
     {
       path: '/about',
       name: 'About',
       component: () => import('../views/SecondPage.vue'),
-      meta: {
-        requiresGuest: true
-      }
+      meta: { requiresGuest: true }
     },
     {
       path: '/:pathMatch(.*)*',
@@ -35,14 +31,12 @@ const router = createRouter({
 
 router.beforeResolve((to, from, next) => {
   if (to.name) {
-    // Start the route progress bar.
     NProgress.start()
   }
   next()
 })
 
 router.afterEach(() => {
-  // Complete the animation of the route progress bar.
   NProgress.done()
 })
 

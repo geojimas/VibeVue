@@ -1,12 +1,3 @@
-
-<script setup>
-  import BaseButton from './BaseButton.vue'
-  import { RouterLink } from 'vue-router'
-  import ThemeToggle from './ThemeToggle.vue'
-  import SwitchLanguage from './SwitchLanguage.vue'
-</script>
-
-
 <template>
   <nav class="flex justify-center items-center flex-row p-2">
     <RouterLink
@@ -30,4 +21,13 @@
     <SwitchLanguage />
   </nav>
 </template>
+
+<script setup>
+  import BaseButton from './BaseButton.vue'
+  import { RouterLink } from 'vue-router'
+  import ThemeToggle from './ThemeToggle.vue'
+  import SwitchLanguage from './SwitchLanguage.vue'
+</script>
+
+
 

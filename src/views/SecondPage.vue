@@ -1,15 +1,3 @@
-<script setup>
-  import { storeToRefs } from 'pinia'
-  import { useCounterStore } from '../store/counter'
-  import BaseButton from '../components/BaseButton.vue'
-
-  const counterStore = useCounterStore()
-
-  const { count, doubleCount } = storeToRefs(counterStore)
-  const { increment } = counterStore
-
-</script>
-
 <template>
   <div class="hero bg-base-200 flex-1 overflow-auto">
     <div class="hero-content flex-col lg:flex-row">
@@ -39,3 +27,16 @@
     </div>
   </div>
 </template>
+
+
+<script setup>
+  import { storeToRefs } from 'pinia'
+  import { useCounterStore } from '../store/counter'
+  import BaseButton from '../components/BaseButton.vue'
+
+  const counterStore = useCounterStore()
+
+  const { count, doubleCount } = storeToRefs(counterStore)
+  const { increment } = counterStore
+
+</script>
