@@ -10,7 +10,6 @@
 <template>
   <nav class="flex justify-center items-center flex-row p-2">
     <RouterLink
-      class="mx-4"
       to="/"
     >
       <BaseButton
@@ -27,7 +26,7 @@
         :label="$t('nav.second')"
       />
     </RouterLink>
-    <ThemeToggle class="mx-4" />
+    <ThemeToggle class="mr-4" />
     <SwitchLanguage />
   </nav>
 </template>

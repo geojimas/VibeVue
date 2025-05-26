@@ -22,6 +22,14 @@ const router = createRouter({
         requiresGuest: true
       }
     },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'not-found',
+      component: () => import('../components/PageNotFound.vue'),
+      meta: { hideLayout: true }
+
+    }
+
   ],
 })
 

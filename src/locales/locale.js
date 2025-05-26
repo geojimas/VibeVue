@@ -24,6 +24,12 @@ export const messages = {
             header: 'Copyright',
             label: 'by Dimitris Georgiadis, All Rights reserved.'
         },
+        notFound: {
+            status: '404',
+            header: 'Page Not Found',
+            message: "Oops! The page you're looking for doesn't exist.",
+            return: 'Home'
+        }
     },
     el: {
         nav: {
@@ -48,7 +54,13 @@ export const messages = {
         },
         footer: {
             header: 'Πνευματικά δικαιώματα',
-            label: 'από Δημήτρης Γεωργιάδης, Όλα τα δικαιώματα διατηρούνται.'
+            label: 'από Δημήτρης ΓεωργιάδηςF, Όλα τα δικαιώματα διατηρούνται.'
         },
+        notFound: {
+            status: '404',
+            header: 'Η Σελίδα δεν βρέθηκε',
+            message: 'Ουπς ! Η σελίδα που ψάχνετε δεν υπάρχει.',
+            return: 'Αρχική'
+        }
     }
 }

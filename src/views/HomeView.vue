@@ -19,7 +19,7 @@
   <div class="hero bg-base-200 flex-1 overflow-auto">
     <div class="hero-content text-center flex-col">
       <div class="max-w-md">
-        <h1 class="text-xl font-bold">
+        <h1 class="text-2xl font-bold">
           {{ $t('home.page') }}
         </h1>
         <p class="py-4 text-md">
