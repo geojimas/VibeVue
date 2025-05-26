@@ -13,6 +13,7 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.1.7",
     "daisyui": "^5.0.37",
+    "nprogress": "^0.2.0",
     "pinia": "^3.0.2",
     "tailwindcss": "^4.1.7",
     "vue": "^3.5.10",
