@@ -13,7 +13,7 @@
       to="/"
     >
       <BaseButton
-        theme="warning"
+        theme="success"
         label="Home"
       />
     </RouterLink>
@@ -22,7 +22,7 @@
       to="/about"
     >
       <BaseButton
-        theme="warning"
+        theme="success"
         label="Store"
       />
     </RouterLink>
