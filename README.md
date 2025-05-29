@@ -44,9 +44,6 @@ npm run build
 
 ---
 
-## Technologies List
-![Performance](./tech.png)
-
 ## Performance
 ![Performance](./diagnose.png)
 
