@@ -20,18 +20,18 @@ This template is a solid foundation to build Vue 3 apps quickly using Vite. It i
 
 ### Prerequisites
 
-* Node.js & npm
+* Node.js & npm & pnpm
 
 ### Install dependencies
 
 ```bash
-npm install
+pnpm install
 ```
 
 ### Run development server
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 Open your browser to start coding.
@@ -39,20 +39,20 @@ Open your browser to start coding.
 ### Build for production
 
 ```bash
-npm run build
+pnpm run build
 ```
-
----
-
-## Performance
-![Performance](./diagnose.png)
-
----
 
 ## ESLint & Formatting
 * Vue 3 specific rules enabled
 * Supports autofixing on save in editors like VSCode
 
-## Contributing
+## Tech
+![](./tech.png)
 
+
+## Performance
+![](./diagnose.png)
+
+
+## Contributing
 Feel free to open issues or pull requests to improve the template!

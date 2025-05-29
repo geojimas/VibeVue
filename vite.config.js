@@ -12,6 +12,6 @@ export default defineConfig({
     tailwindcss(),
     analyzer(),
     VitePWA(),
-    Sitemap({ hostname: 'https://vptdes.netlify.app' }),
+    Sitemap({ hostname: 'https://vibe-vue.vercel.app' }),
   ],
 })
