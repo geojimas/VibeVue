@@ -29,7 +29,6 @@
     "vite": "^5.4.8",
     "vite-bundle-analyzer": "^0.21.0",
     "vite-plugin-pwa": "^1.0.0",
-    "vite-plugin-radar": "^0.10.0",
     "vite-plugin-sitemap": "^0.8.2",
     "vitest": "^3.1.4"
   }
