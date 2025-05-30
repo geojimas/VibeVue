@@ -8,6 +8,7 @@ import Sitemap from 'vite-plugin-sitemap'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/',
   plugins: [
     vue(),
     tailwindcss(),
