@@ -6,10 +6,10 @@ import App from './App.vue'
 import router from './router'
 import { messages } from './locales/locale'
 
-import '../node_modules/nprogress/nprogress.css'
 import './assets/base.css'
 
 const app = createApp(App)
+const pinia = createPinia()
 
 const i18n = createI18n({
   legacy: false,
@@ -18,7 +18,7 @@ const i18n = createI18n({
   messages,
 })
 
-app.use(createPinia())
+app.use(pinia)
 app.use(router)
 app.use(i18n)
 

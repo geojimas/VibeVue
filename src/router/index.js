@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import NProgress from 'nprogress'
+import { useLoadingStore } from '../store/loader'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,11 +26,14 @@ const router = createRouter({
 })
 
 router.beforeEach((_to, _from, next) => {
-  NProgress.start()
+  const { setLoading } = useLoadingStore()
+  setLoading(true)
   next()
 })
-router.afterEach(() => {
-  NProgress.done()
+
+router.afterEach((_to, _from, _next) => {
+  const { setLoading } = useLoadingStore()
+  setLoading(false)
 })
 
 export default router
