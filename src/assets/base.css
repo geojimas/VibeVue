@@ -4,10 +4,10 @@
   themes: light --default, dark;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
-
-body {
-  font-family: "Acme", sans-serif;
-  font-weight: 400;
+@font-face {
+  font-family: 'Acme';
   font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/acme/v17/RrQfboBx-C5_XxrBbg.woff2') format('woff2');
 }

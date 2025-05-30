@@ -1,17 +1,14 @@
 <template>
   <div class="flex cursor-pointer gap-2 items-center">
     <SunSVG />
-    <label
-      for="toggleTheme"
+    <label for="toggleTheme" />
+    <input
+      id="toggleTheme"
+      type="checkbox"
+      :checked="isDarkTheme"
+      class="toggle toggle-md"
+      @change="toggleTheme"
     >
-      <input
-        id="toggleTheme"
-        type="checkbox"
-        :checked="isDarkTheme"
-        class="toggle toggle-md"
-        @change="toggleTheme"
-      >
-    </label>
     <MoonSVG />
   </div>
 </template>
