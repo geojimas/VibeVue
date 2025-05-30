@@ -8,11 +8,10 @@
 
 <script setup>
 
-  import { RouterView } from 'vue-router'
+  import { RouterView, useRoute } from 'vue-router'
   import HeaderSection from './components/HeaderSection.vue'
   import FooterSection from './components/FooterSection.vue'
 
-  import { useRoute } from 'vue-router'
   const route = useRoute()
 
 </script>

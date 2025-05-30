@@ -28,6 +28,3 @@
   import ThemeToggle from './ThemeToggle.vue'
   import SwitchLanguage from './SwitchLanguage.vue'
 </script>
-
-
-

@@ -8,13 +8,11 @@ const router = createRouter({
       path: '/',
       name: 'Home',
       component: () => import('../views/HomeView.vue'),
-      meta: { requiresGuest: true }
     },
     {
       path: '/about',
       name: 'About',
       component: () => import('../views/SecondPage.vue'),
-      meta: { requiresGuest: true }
     },
     {
       path: '/:pathMatch(.*)*',
@@ -27,13 +25,10 @@ const router = createRouter({
   ],
 })
 
-router.beforeResolve((to, _from, next) => {
-  if (to.name) {
-    NProgress.start()
-  }
+router.beforeEach((_to, _from, next) => {
+  NProgress.start()
   next()
 })
-
 router.afterEach(() => {
   NProgress.done()
 })
