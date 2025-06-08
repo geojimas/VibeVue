@@ -10,17 +10,18 @@
 <script setup>
   import { RouterView, useRoute } from 'vue-router'
   import { storeToRefs } from 'pinia'
-  import { computed } from 'vue'
-
-  import HeaderSection from './components/HeaderSection.vue'
-  import FooterSection from './components/FooterSection.vue'
-  import LoadingSpinner from './components/LoadingSpinner.vue'
+  import { computed, defineAsyncComponent } from 'vue'
   import { useLoadingStore } from './store/loader'
 
+  const HeaderSection = defineAsyncComponent(() => import('./components/HeaderSection.vue'))
+  const FooterSection = defineAsyncComponent(() => import('./components/FooterSection.vue'))
+  const LoadingSpinner = defineAsyncComponent(() => import('./components/LoadingSpinner.vue'))
+
+
+  const route = useRoute()
   const loadingStore = useLoadingStore()
   const { isLoading } = storeToRefs(loadingStore)
 
-  const route = useRoute()
 
   const isNotFoundPageRendered = computed( () => {
     return !route.meta.hideLayout

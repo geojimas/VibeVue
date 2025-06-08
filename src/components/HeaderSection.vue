@@ -1,8 +1,6 @@
 <template>
   <nav class="flex justify-center items-center flex-row p-2">
-    <RouterLink
-      to="/"
-    >
+    <RouterLink to="/">
       <BaseButton
         theme="success"
         :label="$t('nav.main')"
@@ -23,8 +21,11 @@
 </template>
 
 <script setup>
-  import BaseButton from './BaseButton.vue'
   import { RouterLink } from 'vue-router'
-  import ThemeToggle from './ThemeToggle.vue'
-  import SwitchLanguage from './SwitchLanguage.vue'
+  import { defineAsyncComponent } from 'vue'
+
+  const ThemeToggle = defineAsyncComponent(() => import('./ThemeToggle.vue'))
+  const BaseButton = defineAsyncComponent(() => import('./BaseButton.vue'))
+  const SwitchLanguage = defineAsyncComponent(() => import('./SwitchLanguage.vue'))
+
 </script>

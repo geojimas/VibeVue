@@ -25,9 +25,9 @@
 </template>
 
 <script setup>
-  import { useTemplateRef } from 'vue'
-  import BaseButton from './BaseButton.vue'
- 
+  import { defineAsyncComponent, useTemplateRef } from 'vue'
+
+  const BaseButton = defineAsyncComponent(() => import('./BaseButton.vue'))
   const modalRef = useTemplateRef('base_modal')
 
   function HandleModalClick() {

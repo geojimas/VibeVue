@@ -23,6 +23,8 @@
 
 <script setup>
   import { RouterLink } from 'vue-router'
-  import BaseButton from '../components/BaseButton.vue'
+  import { defineAsyncComponent } from 'vue'
+
+  const BaseButton = defineAsyncComponent(() => import('../components/BaseButton.vue'))
 
 </script>

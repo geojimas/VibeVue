@@ -1,9 +1,14 @@
 <template>
   <div class="flex cursor-pointer gap-2 items-center">
     <SunSVG />
-    <label for="toggleTheme" />
+    <label
+      for="toggleTheme"
+      class="sr-only"
+    >Toggle dark mode
+    </label>
     <input
       id="toggleTheme"
+      aria-label="Toggle dark mode"
       type="checkbox"
       :checked="isDarkTheme"
       class="toggle toggle-md"

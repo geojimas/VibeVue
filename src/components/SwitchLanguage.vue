@@ -1,4 +1,3 @@
-
 <template>
   <BaseButton
     class="btn btn-dash"
@@ -9,8 +8,9 @@
 
 <script setup>
   import { useI18n } from 'vue-i18n'
-  import { computed } from 'vue'
-  import BaseButton from './BaseButton.vue'
+  import { computed, defineAsyncComponent } from 'vue'
+
+  const BaseButton = defineAsyncComponent(() => import('./BaseButton.vue'))
 
   const { locale } = useI18n()
 

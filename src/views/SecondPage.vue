@@ -30,9 +30,11 @@
 
 
 <script setup>
+  import { defineAsyncComponent } from 'vue'
   import { storeToRefs } from 'pinia'
   import { useCounterStore } from '../store/counter'
-  import BaseButton from '../components/BaseButton.vue'
+
+  const BaseButton = defineAsyncComponent(() => import('../components/BaseButton.vue'))
 
   const counterStore = useCounterStore()
 

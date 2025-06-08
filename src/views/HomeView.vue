@@ -23,7 +23,9 @@
 </template>
 
 <script setup>
-  import BaseModal from '../components/BaseModal.vue'
+  import { defineAsyncComponent } from 'vue'
+
+  const BaseModal = defineAsyncComponent(() => import('../components/BaseModal.vue'))
 
   const tools = [
     'Vue 3',
