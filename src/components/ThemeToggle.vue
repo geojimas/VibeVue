@@ -23,8 +23,9 @@
   import { useTheme } from '../composables/useTheme'
   import SunSVG from '../assets/SunSVG.vue'
   import MoonSVG from '../assets/MoonSVG.vue'
+  import Constants from '../constants/index.js'
 
   const { currentTheme, toggleTheme } = useTheme()
 
-  const isDarkTheme = computed(() => currentTheme.value === 'dark')
+  const isDarkTheme = computed(() => currentTheme.value === Constants.THEMES.DARK)
 </script>

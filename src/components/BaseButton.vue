@@ -17,6 +17,8 @@
     inheritAttrs: true,
   })
 
+  defineEmits(['click'])
+
   const props = defineProps({
     label: {
       type: String,
@@ -29,8 +31,6 @@
         Constants.AVAILABLE_COLORS.includes(value),
     },
   })
-
-  defineEmits(['click'])
 
   const { label, theme } = toRefs(props)
 

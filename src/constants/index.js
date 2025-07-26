@@ -9,5 +9,14 @@ export default {
     warning: 'btn-warning',
     error: 'btn-error',
   },
+  THEMES: {
+    DARK: 'dark',
+    LIGHT: 'light',
+  },
+  LANGUAGES: {
+    EN: 'EN',
+    EL: 'GR'
+  },
+  AVAILABLE_LANGUAGES:['en','el'],
   AVAILABLE_COLORS: ['none', 'primary', 'secondary', 'accent', 'info', 'success', 'warning', 'error'],
 }
