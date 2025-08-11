@@ -6,13 +6,11 @@ export default [
   // js.configs.recommended,
   ...pluginVue.configs['flat/recommended'],
   {
-    ignores: ['dist/**'],
+  ignores: ['dist/**', 'dev-dist/**', 'node_modules/**'],
   },
-  // ...pluginVue.configs['flat/vue2-recommended'], // Use this if you are using Vue.js 2.x.
   {
     rules: {
       // override/add rules settings here, such as:
-
       // Additional Vue 3 specific rules
       'vue/multi-word-component-names': 'off', // Disable the rule that requires multi-word component names in Vue
       'vue/component-api-style': ['error', ['script-setup', 'composition']], // Enforce specific API style for Vue components
