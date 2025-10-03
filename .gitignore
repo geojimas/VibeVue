@@ -14,7 +14,7 @@ dev-dist
 *.local
 
 # Editor directories and files
-.vscode/*
+.vscode
 .idea
 .DS_Store
 *.suo
