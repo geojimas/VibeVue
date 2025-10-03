@@ -7,7 +7,7 @@
     "dev": "vite --host",
     "lint": "eslint . --fix",
     "build": "vite build --debug",
-    "unit": "vitest",
+    "tests": "vitest",
     "preview": "vite preview",
     "prepare": "husky"
   },
