@@ -17,6 +17,6 @@ export default {
     EN: 'EN',
     EL: 'GR'
   },
-  AVAILABLE_LANGUAGES:['en','el'],
+  AVAILABLE_LANGUAGES: ['en', 'el'],
   AVAILABLE_COLORS: ['none', 'primary', 'secondary', 'accent', 'info', 'success', 'warning', 'error'],
 }
