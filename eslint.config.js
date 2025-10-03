@@ -6,7 +6,7 @@ export default [
   // js.configs.recommended,
   ...pluginVue.configs['flat/recommended'],
   {
-  ignores: ['dist/**', 'dev-dist/**', 'node_modules/**'],
+    ignores: ['dist/**', 'dev-dist/**', 'node_modules/**'],
   },
   {
     rules: {
@@ -42,6 +42,10 @@ export default [
       'space-infix-ops': ['error', { int32Hint: false }], // spaces specifically around the = in variable declarations
       'operator-linebreak': ['error', 'after'],
       'no-var': 'error', // Disallow var, enforce let/const
+      'no-multi-spaces': ['error', { ignoreEOLComments: false }], // Enforce consistent spacing inside variable declarations
+      'arrow-spacing': ['error', { before: true, after: true }], // Enforce consistent spacing around arrow functions
+      'space-infix-ops': ['error', { int32Hint: false }], // Enforce spacing around operators (=, +, -, etc.)
+      'comma-spacing': ['error', { before: false, after: true }], // Enforce spacing after commas
       'prefer-const': 'error', // Use const where possible
       'arrow-spacing': ['error', { before: true, after: true }], // Consistent spacing around =>
       'object-curly-spacing': ['error', 'always'], // Require spacing inside curly braces
