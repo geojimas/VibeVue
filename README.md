@@ -45,17 +45,17 @@ Open your browser to start coding.
 npm run build
 ```
 
-## ESLint & Formatting
-* Vue 3 specific rules enabled
-* Supports autofixing on save in editors like VSCode
+---
 
 ## Tech
 ![](./tech.png)
 
+---
 
 ## Performance
 ![](./diagnose.png)
 
+---
 
 ## Contributing
 Feel free to open issues or pull requests to improve the template!
