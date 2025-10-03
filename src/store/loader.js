@@ -1,8 +1,9 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
+import StoreTypes from './types'
 
 // Composition API style store definition
-export const useLoadingStore = defineStore('loader', () => {
+export const useLoadingStore = defineStore(StoreTypes.LOADER, () => {
   // State
   const isLoading = ref(false)
   // Actions

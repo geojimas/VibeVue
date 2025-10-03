@@ -1,7 +1,8 @@
 import { defineStore } from 'pinia'
+import StoreTypes from './types'
 
 // Vuex style store definition
-export const useCounterStore = defineStore('counter', {
+export const useCounterStore = defineStore(StoreTypes.COUNTER, {
     state: () => ({
         count: 0,
     }),

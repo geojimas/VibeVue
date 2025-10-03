@@ -21,7 +21,7 @@
 
   const toggleLanguage = () => {
     locale.value = nextLanguage.value
-    localStorage.setItem('lang', nextLanguage.value)
+    localStorage.setItem('lang', locale.value)
   }
 
   const nextLanguageLabel = computed(() => Constants.LANGUAGES[nextLanguage.value.toUpperCase()])

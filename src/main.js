@@ -4,7 +4,8 @@ import { createI18n } from 'vue-i18n'
 
 import App from './App.vue'
 import router from './router'
-import { messages } from './locales/locale'
+import { localesEL } from './locales/localesEL'
+import { localesEN } from './locales/localesEN'
 
 import './assets/base.css'
 
@@ -15,7 +16,10 @@ const i18n = createI18n({
   legacy: false,
   locale: localStorage.getItem('lang') || 'en',
   fallbackLocale: 'el',
-  messages,
+  messages: {
+    en: localesEN,
+    el: localesEL
+  },
 })
 
 app.use(pinia)
