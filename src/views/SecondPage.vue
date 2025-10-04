@@ -1,8 +1,16 @@
 <template>
-  <div class="hero bg-base-200 flex-1 overflow-auto">
+  <div
+    :initial="{ opacity: 0, scale: 0 }"
+    :animate="{ opacity: 1, scale: 1 }"
+    :transition="{
+      duration: 0.4,
+      scale: { type: 'spring', visualDuration: 0.4, bounce: 0.5 }
+    }"
+    class="hero bg-base-200 flex-1 overflow-auto"
+  >
     <div class="hero-content flex-col lg:flex-row">
       <div class="card bg-base-100 max-w-88 shadow-sm">
-        <div class="card-body gap-9">
+        <BaseMotion class="card-body gap-9">
           <h2 class="card-title flex justify-center text-3xl">
             {{ $t('second.page') }}
           </h2>
@@ -22,7 +30,7 @@
               <span class="text-lg">{{ $t('second.double_counter') }} :{{ doubleCount }}</span>
             </div>
           </div>
-        </div>
+        </BaseMotion>
       </div>
     </div>
   </div>
@@ -34,6 +42,7 @@
   import { storeToRefs } from 'pinia'
   import { useCounterStore } from '../store/counter'
 
+  const BaseMotion = defineAsyncComponent(() => import('../components/BaseMotion.vue'))
   const BaseButton = defineAsyncComponent(() => import('../components/BaseButton.vue'))
 
   const counterStore = useCounterStore()

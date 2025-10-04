@@ -11,20 +11,7 @@
     <div class="modal-box">
       <form method="dialog">
         <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="{1.5}"
-            stroke="currentColor"
-            className="size-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M6 18 18 6M6 6l12 12"
-            />
-          </svg>
+          <CloseButtonSVG />
         </button>
       </form>
       <h3 class="text-lg font-bold">
@@ -39,8 +26,10 @@
 
 <script setup>
   import { defineAsyncComponent, useTemplateRef } from 'vue'
-
+  
   const BaseButton = defineAsyncComponent(() => import('./BaseButton.vue'))
+  const CloseButtonSVG = defineAsyncComponent(() => import('../assets/CloseButtonSVG.vue'))
+
   const modalRef = useTemplateRef('base_modal')
 
   function HandleModalClick() {

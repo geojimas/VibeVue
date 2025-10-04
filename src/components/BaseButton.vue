@@ -14,6 +14,7 @@
   import Constants from '../constants/index.js'
 
   defineOptions({
+    name: 'BaseButton',
     inheritAttrs: true,
   })
 
