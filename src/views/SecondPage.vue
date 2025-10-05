@@ -1,6 +1,10 @@
 <template>
   <div class="hero bg-base-200 flex-1 overflow-auto">
-    <div class="hero-content flex-col lg:flex-row">
+    <BaseFade
+      :duration="600"
+      :appear="true"
+      class="hero-content flex-col lg:flex-row"
+    >
       <div class="card bg-base-100 max-w-88 shadow-sm">
         <div class="card-body gap-9">
           <h2 class="card-title flex justify-center text-3xl">
@@ -24,7 +28,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </BaseFade>
   </div>
 </template>
 
@@ -34,6 +38,7 @@
   import { storeToRefs } from 'pinia'
   import { useCounterStore } from '../store/counter'
 
+  const BaseFade = defineAsyncComponent(() => import('../components/BaseFade.vue'))
   const BaseButton = defineAsyncComponent(() => import('../components/BaseButton.vue'))
 
   const counterStore = useCounterStore()
