@@ -1,8 +1,6 @@
 <template>
   <div class="hero bg-base-200 flex-1 overflow-auto">
-    <BaseMotion
-      class="hero-content text-center flex-col"
-    >
+    <div class="hero-content text-center flex-col">
       <div class="max-w-md">
         <h1 class="text-2xl font-bold">
           {{ $t('home.page') }}
@@ -20,14 +18,14 @@
         </ul>
       </div>
       <BaseModal />
-    </BaseMotion>
+    </div>
   </div>
 </template>
 
 <script setup>
   import { defineAsyncComponent } from 'vue'
+  
   const BaseModal = defineAsyncComponent(() => import('../components/BaseModal.vue'))
-  const BaseMotion = defineAsyncComponent(() => import('../components/BaseMotion.vue'))
 
   const tools = [
     'Vue 3',

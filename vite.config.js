@@ -9,6 +9,11 @@ import Sitemap from 'vite-plugin-sitemap'
 // https://vitejs.dev/config/
 export default defineConfig({
   base: '/',
+  server: {
+    port: 3000,
+    open: true,
+    strictPort: true,
+  },
   plugins: [
     vue(),
     tailwindcss(),
