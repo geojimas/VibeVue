@@ -48,12 +48,12 @@ npm run build
 ---
 
 ## Tech
-![](./tech.png)
+![](./public/tech.png)
 
 ---
 
 ## Performance
-![](./diagnose.png)
+![](./public/diagnose.png)
 
 ---
 
