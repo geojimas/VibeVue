@@ -17,25 +17,25 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.17",
-    "daisyui": "^5.5.5",
+    "daisyui": "^5.5.8",
     "pinia": "^3.0.4",
     "tailwindcss": "^4.1.17",
     "vue": "^3.5.25",
-    "vue-i18n": "^11.2.1",
+    "vue-i18n": "^11.2.2",
     "vue-router": "^4.6.3"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.2",
     "@vue/test-utils": "^2.4.6",
     "eslint": "^9.39.1",
-    "eslint-plugin-vue": "^10.6.0",
+    "eslint-plugin-vue": "^10.6.2",
     "globals": "^16.5.0",
     "husky": "^9.1.7",
     "jsdom": "^27.2.0",
-    "vite": "^7.2.4",
+    "vite": "^7.2.6",
     "vite-bundle-analyzer": "^1.2.3",
-    "vite-plugin-pwa": "^1.1.0",
+    "vite-plugin-pwa": "^1.2.0",
     "vite-plugin-sitemap": "^0.8.2",
-    "vitest": "^4.0.13"
+    "vitest": "^4.0.15"
   }
 }
