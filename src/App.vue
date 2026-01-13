@@ -1,10 +1,12 @@
 <template>
-  <div class="flex flex-col h-screen">
+  <main class="flex flex-col h-screen">
     <HeaderSection v-if="isNotFoundPageRendered" />
+
     <LoadingSpinner v-if="isLoading" />
     <RouterView v-else />
+
     <FooterSection v-if="isNotFoundPageRendered" />
-  </div>
+  </main>
 </template>
 
 <script setup>
