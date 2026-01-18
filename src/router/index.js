@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import { useLoadingStore } from '../store/loader'
 
 const router = createRouter({
+  linkActiveClass: 'active-route',
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
