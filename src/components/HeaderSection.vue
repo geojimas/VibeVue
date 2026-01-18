@@ -2,19 +2,19 @@
   <nav class="flex justify-center md:justify-evenly items-center flex-row p-2">
     <div class="flex gap-6">
       <RouterLink
-        class="tracking-wide opacity-50 hover:opacity-80"
+        class="p-1 tracking-wide opacity-70 hover:opacity-90"
         to="/"
       >
         {{ $t('nav.main') }}
       </RouterLink>
       <RouterLink
-        class="tracking-wide opacity-50 hover:opacity-80"
+        class="p-1 tracking-wide opacity-70 hover:opacity-90"
         to="/about"
       >
         {{ $t('nav.second') }}
       </RouterLink>
     </div>
-    <div class="flex gap-6">
+    <div class="flex gap-4">
       <ThemeToggle class="mx-4" />
       <SwitchLanguage />
     </div>
