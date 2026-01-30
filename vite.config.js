@@ -10,7 +10,7 @@ import Sitemap from 'vite-plugin-sitemap'
 export default defineConfig({
   base: '/',
   server: {
-    port: 3000,
+    port: 5173,
     open: true,
     strictPort: true,
   },
