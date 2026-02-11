@@ -45,6 +45,12 @@ Open your browser to start coding.
 npm run build
 ```
 
+### Update Packages version
+
+```bash
+npx npm-check-updates --interactive
+```
+
 ---
 
 ## Tech
