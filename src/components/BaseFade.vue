@@ -15,9 +15,9 @@
 
 <script setup>
 
-  defineOptions({ 
+  defineOptions({
     name: 'BaseFade',
-    inheritAttrs: true 
+    inheritAttrs: true
   })
 
   defineProps({
@@ -41,7 +41,6 @@
 </script>
 
 <style scoped lang="css">
-
 /* Fade Animation */
 .fade-enter-active,
 .fade-leave-active {
@@ -52,9 +51,9 @@
 .fade-leave-to {
   opacity: 0;
 }
+
 .fade-enter-to,
 .fade-leave-from {
   opacity: 1;
 }
-
 </style>
