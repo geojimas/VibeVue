@@ -26,13 +26,12 @@ const router = createRouter({
   ],
 })
 
-router.beforeEach((_to, _from, next) => {
+router.beforeEach((_to, _from) => {
   const { setLoading } = useLoadingStore()
   setLoading(true)
-  next()
 })
 
-router.afterEach((_to, _from, _next) => {
+router.afterEach((_to, _from) => {
   const { setLoading } = useLoadingStore()
   setLoading(false)
 })
