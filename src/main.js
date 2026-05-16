@@ -27,3 +27,27 @@ app.use(router)
 app.use(i18n)
 
 app.mount('#app')
+
+function loadAnalytics() {
+  const script = document.createElement('script')
+  script.setAttribute('data-collect-dnt', 'true')
+  script.async = true
+  script.src = 'https://scripts.simpleanalyticscdn.com/latest.js'
+  document.body.appendChild(script)
+}
+
+function scheduleAnalytics() {
+  if ('requestIdleCallback' in window) {
+    window.requestIdleCallback(loadAnalytics, { timeout: 2000 })
+  } else {
+    window.setTimeout(loadAnalytics, 2000)
+  }
+}
+
+if (typeof window !== 'undefined') {
+  if (document.readyState === 'complete') {
+    scheduleAnalytics()
+  } else {
+    window.addEventListener('load', scheduleAnalytics)
+  }
+}
