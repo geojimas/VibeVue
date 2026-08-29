@@ -2,6 +2,6 @@
 
 VibeVue is a Vue 3 starter app built with Vite, Vue Router, Pinia, Vue I18n, Tailwind CSS, DaisyUI, and Vitest.
 
-- Project repository: https://github.com/geojimas/VibeVue
-- Live demo: https://vibe-vue.vercel.app
-- Documentation: https://github.com/geojimas/VibeVue#readme
+- [Project repository](https://github.com/geojimas/VibeVue)
+- [Live demo](https://vibe-vue.vercel.app)
+- [Documentation](https://github.com/geojimas/VibeVue#readme)
