@@ -1,5 +1,5 @@
 echo "Running lint checks..."
 
-npm run lint && npm run tests
+npm run lint && npm run test
 
-echo "✅ Lint passed. Proceeding with push."
+echo "✅ Lint and tests passed. Proceeding with commit."
