@@ -1,10 +1,10 @@
 <template>
-  <div class="hero bg-base-200 flex-1 overflow-auto">
+  <div class="hero min-h-128 bg-base-200 text-base-content flex-1 overflow-auto">
     <BaseFade
       :duration="600"
       :appear="true"
     >
-      <div class="hero-content text-center flex-col">
+      <div class="hero-content min-h-80 text-center flex-col">
         <div class="max-w-md">
           <h1 class="text-2xl font-bold">
             {{ $t('home.page') }}
@@ -28,10 +28,8 @@
 </template>
 
 <script setup>
-import { defineAsyncComponent } from 'vue'
-
-  const BaseFade = defineAsyncComponent(() => import('../components/BaseFade.vue'))
-  const BaseModal = defineAsyncComponent(() => import('../components/BaseModal.vue'))
+import BaseFade from '../components/BaseFade.vue'
+import BaseModal from '../components/BaseModal.vue'
 
   const tools = [
     'Vue 3',
