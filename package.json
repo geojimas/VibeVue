@@ -5,7 +5,8 @@
   "type": "module",
   "engines": {
     "node": ">=22",
-    "npm": ">=9.0.0"
+    "npm": ">=9.0.0",
+    "yarn": ">=1.22.0"
   },
   "scripts": {
     "dev": "vite --host",
@@ -14,7 +15,7 @@
     "preview": "vite preview --host",
     "lint": "eslint . --fix",
     "test": "vitest run",
-    "check": "npm run lint && npm run test && npm run build",
+    "check": "yarn run lint && yarn run test && yarn run build",
     "prepare": "husky"
   },
   "dependencies": {
