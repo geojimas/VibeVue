@@ -1,3 +1,5 @@
+set -e
+
 echo "Running lint checks..."
 
 npm run lint && npm run test
