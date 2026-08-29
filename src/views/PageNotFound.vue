@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen flex flex-col items-center justify-center bg-base-200 text-base-content text-center px-4">
+  <div class="min-h-screen flex flex-col items-center justify-center bg-base-200 text-center px-4">
     <h1 class="text-9xl font-bold text-primary">
       {{ $t('notFound.status') }}
     </h1>

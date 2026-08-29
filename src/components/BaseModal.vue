@@ -1,6 +1,5 @@
 <template>
   <BaseButton
-    class="text-white"
     :label="$t('home.modal.label')"
     theme="info"
     @click="handleModalClick"
