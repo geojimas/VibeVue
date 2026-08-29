@@ -28,32 +28,47 @@ app.use(i18n)
 
 app.mount('#app')
 
+function shouldSkipAnalytics() {
+  const dnt = navigator.doNotTrack || window.doNotTrack
+  const isLocalhost = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname)
+
+  return isLocalhost || (!!dnt && (dnt === '1' || dnt === 'yes'))
+}
+
 function loadAnalytics() {
+  if (shouldSkipAnalytics()) return
+
   const existingScript = document.querySelector('script[data-collect-dnt="true"]')
   if (existingScript) return
 
   const script = document.createElement('script')
   script.setAttribute('data-collect-dnt', 'true')
   script.async = true
+  script.defer = true
   script.src = 'https://scripts.simpleanalyticscdn.com/latest.js'
   script.onerror = () => {
     script.remove()
+    window.__saLoaded = false
   }
-  document.body.appendChild(script)
+  document.head.appendChild(script)
 }
 
 function scheduleAnalytics() {
-  if ('requestIdleCallback' in window) {
-    window.requestIdleCallback(loadAnalytics, { timeout: 2000 })
+  const runner = () => {
+    if ('requestIdleCallback' in window) {
+      window.requestIdleCallback(loadAnalytics, { timeout: 5000 })
+    } else {
+      window.setTimeout(loadAnalytics, 2000)
+    }
+  }
+
+  if (document.readyState === 'complete') {
+    runner()
   } else {
-    window.setTimeout(loadAnalytics, 2000)
+    window.addEventListener('load', runner, { once: true })
   }
 }
 
 if (typeof window !== 'undefined') {
-  if (document.readyState === 'complete') {
-    scheduleAnalytics()
-  } else {
-    window.addEventListener('load', scheduleAnalytics)
-  }
+  scheduleAnalytics()
 }
