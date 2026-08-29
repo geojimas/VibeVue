@@ -1,6 +1,6 @@
 <template>
   <button
-    class="btn btn-outline text-xs md:text-lg"
+    class="btn text-xs md:text-lg"
     :class="themeClass"
     @click="$emit('click')"
   >

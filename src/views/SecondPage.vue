@@ -1,5 +1,5 @@
 <template>
-  <div class="hero bg-base-200 flex-1 overflow-auto">
+  <div class="hero bg-base-200 text-base-content flex-1 overflow-auto">
     <BaseFade
       :duration="600"
       :appear="true"
