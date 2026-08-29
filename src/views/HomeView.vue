@@ -28,7 +28,7 @@
 </template>
 
 <script setup>
-  import { defineAsyncComponent } from 'vue'
+import { defineAsyncComponent } from 'vue'
 
   const BaseFade = defineAsyncComponent(() => import('../components/BaseFade.vue'))
   const BaseModal = defineAsyncComponent(() => import('../components/BaseModal.vue'))

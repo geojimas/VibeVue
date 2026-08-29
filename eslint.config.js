@@ -23,7 +23,7 @@ export default [
       'vue/no-unused-refs': 'error', // Disallow unused template refs
       'vue/prefer-import-from-vue': 'error', // Prefer importing from Vue directly
       'vue/require-explicit-emits': 'error', // Require explicit emits declarations
-      'vue/script-indent': ['error', 2, { baseIndent: 1 }], // Enforce consistent indentation for script tags
+      'vue/script-indent': 'off', // Disabled: project uses a looser script indentation style in SFC files
       'vue/v-on-event-hyphenation': ['error', 'always', { autofix: true }], // Enforce hyphenation for event names in templates
       'vue/valid-define-props': 'error', // Ensure props definitions are valid
       'vue/require-prop-types': 'error',

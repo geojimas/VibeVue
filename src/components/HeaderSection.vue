@@ -22,8 +22,8 @@
 </template>
 
 <script setup>
-  import { RouterLink } from 'vue-router'
-  import { defineAsyncComponent } from 'vue'
+import { RouterLink } from 'vue-router'
+import { defineAsyncComponent } from 'vue'
 
   const ThemeToggle = defineAsyncComponent(() => import('./ThemeToggle.vue'))
   const SwitchLanguage = defineAsyncComponent(() => import('./SwitchLanguage.vue'))

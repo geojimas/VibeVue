@@ -19,11 +19,11 @@
 </template>
 
 <script setup>
-  import { computed } from 'vue'
-  import { useTheme } from '../composables/useTheme'
-  import SunSVG from '../assets/SunSVG.vue'
-  import MoonSVG from '../assets/MoonSVG.vue'
-  import Constants from '../constants/index.js'
+import { computed } from 'vue'
+import { useTheme } from '../composables/useTheme'
+import SunSVG from '../assets/SunSVG.vue'
+import MoonSVG from '../assets/MoonSVG.vue'
+import Constants from '../constants/index.js'
 
   const { currentTheme, toggleTheme } = useTheme()
 

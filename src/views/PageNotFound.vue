@@ -22,8 +22,8 @@
 </template>
 
 <script setup>
-  import { RouterLink } from 'vue-router'
-  import { defineAsyncComponent } from 'vue'
+import { RouterLink } from 'vue-router'
+import { defineAsyncComponent } from 'vue'
 
   const BaseButton = defineAsyncComponent(() => import('../components/BaseButton.vue'))
 

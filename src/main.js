@@ -29,10 +29,16 @@ app.use(i18n)
 app.mount('#app')
 
 function loadAnalytics() {
+  const existingScript = document.querySelector('script[data-collect-dnt="true"]')
+  if (existingScript) return
+
   const script = document.createElement('script')
   script.setAttribute('data-collect-dnt', 'true')
   script.async = true
   script.src = 'https://scripts.simpleanalyticscdn.com/latest.js'
+  script.onerror = () => {
+    script.remove()
+  }
   document.body.appendChild(script)
 }
 

@@ -34,9 +34,9 @@
 
 
 <script setup>
-  import { defineAsyncComponent } from 'vue'
-  import { storeToRefs } from 'pinia'
-  import { useCounterStore } from '../store/counter'
+import { defineAsyncComponent } from 'vue'
+import { storeToRefs } from 'pinia'
+import { useCounterStore } from '../store/counter'
 
   const BaseFade = defineAsyncComponent(() => import('../components/BaseFade.vue'))
   const BaseButton = defineAsyncComponent(() => import('../components/BaseButton.vue'))

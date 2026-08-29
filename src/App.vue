@@ -1,11 +1,11 @@
 <template>
   <main class="flex flex-col h-screen">
-    <HeaderSection v-if="isNotFoundPageRendered" />
+    <HeaderSection v-if="shouldShowLayout" />
 
     <LoadingSpinner v-if="isLoading" />
     <RouterView v-else />
 
-    <FooterSection v-if="isNotFoundPageRendered" />
+    <FooterSection v-if="shouldShowLayout" />
   </main>
 </template>
 
@@ -24,9 +24,6 @@
   const loadingStore = useLoadingStore()
   const { isLoading } = storeToRefs(loadingStore)
 
-
-  const isNotFoundPageRendered = computed( () => {
-    return !route.meta.hideLayout
-  })
+  const shouldShowLayout = computed(() => !route.meta?.hideLayout)
 
 </script>

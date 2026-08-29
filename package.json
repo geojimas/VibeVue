@@ -9,10 +9,12 @@
   },
   "scripts": {
     "dev": "vite --host",
+    "build": "vite build",
+    "build:prod": "vite build --mode production",
+    "preview": "vite preview --host",
     "lint": "eslint . --fix",
-    "build": "vite build --debug",
-    "tests": "vitest",
-    "preview": "vite preview",
+    "test": "vitest run",
+    "check": "npm run lint && npm run test && npm run build",
     "prepare": "husky"
   },
   "dependencies": {

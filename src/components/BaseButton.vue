@@ -10,8 +10,8 @@
 
 
 <script setup>
-  import { toRefs, computed } from 'vue'
-  import Constants from '../constants/index.js'
+import { toRefs, computed } from 'vue'
+import Constants from '../constants/index.js'
 
   defineOptions({
     name: 'BaseButton',

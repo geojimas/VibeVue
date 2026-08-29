@@ -2,7 +2,7 @@
   <BaseButton
     :label="$t('home.modal.label')"
     theme="info"
-    @click="HandleModalClick"
+    @click="handleModalClick"
   />
   <dialog
     ref="base_modal"
@@ -25,14 +25,14 @@
 </template>
 
 <script setup>
-  import { defineAsyncComponent, useTemplateRef } from 'vue'
-  
+import { defineAsyncComponent, useTemplateRef } from 'vue'
+
   const BaseButton = defineAsyncComponent(() => import('./BaseButton.vue'))
   const CloseButtonSVG = defineAsyncComponent(() => import('../assets/CloseButtonSVG.vue'))
 
   const modalRef = useTemplateRef('base_modal')
 
-  function HandleModalClick() {
-    modalRef.value.showModal()
+  function handleModalClick() {
+    modalRef.value?.showModal()
   }
 </script>
