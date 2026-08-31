@@ -2,6 +2,6 @@ set -e
 
 echo "Running lint checks..."
 
-npm run lint && npm run test
+yarn run check
 
 echo "✅ Lint and tests passed. Proceeding with commit."

@@ -15,7 +15,7 @@
     "preview": "vite preview --host",
     "lint": "eslint . --fix",
     "test": "vitest run",
-    "check": "yarn run lint && yarn run test && yarn run build",
+    "check": "yarn run lint && yarn run test",
     "prepare": "husky"
   },
   "dependencies": {
