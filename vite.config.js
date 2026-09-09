@@ -9,7 +9,8 @@ import Sitemap from 'vite-plugin-sitemap'
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
-  const isVitest = mode === 'test' || env.VITE_SKIP_BUILD_PLUGINS === 'true'
+  const isVitest = mode === 'test'
+  const shouldSkipBuildPlugins = isVitest && env.VITE_SKIP_BUILD_PLUGINS === 'true'
 
   return {
     base: '/',
@@ -20,7 +21,7 @@ export default defineConfig(({ mode }) => {
     },
     plugins: [
       vue(),
-      ...(isVitest ? [] : [
+      ...(shouldSkipBuildPlugins ? [] : [
         tailwindcss(),
         analyzer(),
         VitePWA({
