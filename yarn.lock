@@ -1803,10 +1803,10 @@ baseline-browser-mapping@^2.11.12:
   resolved "https://registry.yarnpkg.com/baseline-browser-mapping/-/baseline-browser-mapping-2.11.20.tgz#26078c7a4b08299656ea7ddceaebec955dc44303"
   integrity sha512-H0ulySigv6icDJ1F7SjtdCD6PrhTpdYCmP0CactWy1+ekh0AFd0o1Wn5T8b+hnTmdBx19u9yhL6wvCylXMY7zw==
 
-baseline-browser-mapping@^2.11.22:
-  version "2.11.22"
-  resolved "https://registry.yarnpkg.com/baseline-browser-mapping/-/baseline-browser-mapping-2.11.22.tgz#d8b612f54517d8b3a31734623779e5ab8c5ff0b9"
-  integrity sha512-pWc4w51fBFd7mav43/zKRC+RI6f4yfzQoVlfvE8dECePyfkn1bzLp01Fj0QACcyCZyFhiEMyD2qScfKRWgWibA==
+baseline-browser-mapping@^2.11.23:
+  version "2.11.23"
+  resolved "https://registry.yarnpkg.com/baseline-browser-mapping/-/baseline-browser-mapping-2.11.23.tgz#304c980a35de0f460cf12985359d6e11494c1ab4"
+  integrity sha512-le521dGVfxM7yRX0EikCoSz+rOK+hHzdDt/E7mG1jOJB/6WAAUuwVroLwaB7ApaUsz5Q0kFlDXLSA9MheUIfRQ==
 
 bidi-js@^1.0.3:
   version "1.0.3"
@@ -1986,10 +1986,10 @@ csstype@^3.2.3:
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.2.3.tgz#ec48c0f3e993e50648c86da559e2610995cf989a"
   integrity sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ==
 
-daisyui@^5.7.34:
-  version "5.7.34"
-  resolved "https://registry.yarnpkg.com/daisyui/-/daisyui-5.7.34.tgz#9a4e367e2fe660d51a1b2e120e55afa6575ee28a"
-  integrity sha512-drdJxHnMKnXzOHuATunzvvCPwGonQEZjZXuWN8IQdE1PaOx/DRjv7pH4A1zZ4Jeyw/eAQktYYw1IzmRQKqLanw==
+daisyui@^5.7.37:
+  version "5.7.37"
+  resolved "https://registry.yarnpkg.com/daisyui/-/daisyui-5.7.37.tgz#5fe63d2da17a1950f2877902c611a6cdc312f343"
+  integrity sha512-PVcdAcL0ni6/wmcNwvldARZuO0HdzxtjVEAT86ie9GMgFjwmqIWeXsPaM2/eYqLb4WMexqj146C5Z1xmzZDnjg==
 
 data-urls@^7.0.0:
   version "7.0.0"

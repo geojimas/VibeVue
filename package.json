@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",
-    "daisyui": "^5.7.34",
+    "daisyui": "^5.7.37",
     "pinia": "^4.0.3",
     "tailwindcss": "^4.3.3",
     "vue": "^3.5.42",
@@ -30,7 +30,7 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.8",
     "@vue/test-utils": "^2.5.0",
-    "baseline-browser-mapping": "^2.11.22",
+    "baseline-browser-mapping": "^2.11.23",
     "eslint": "^10.10.0",
     "eslint-plugin-vue": "^10.11.0",
     "globals": "^17.12.0",
