@@ -28,4 +28,31 @@ describe('In BaseButton Component', () => {
     expect(wrapper.emitted()).toHaveProperty('click')
     expect(wrapper.emitted('click').length).toBe(1)
   })
+
+  test('applies the selected theme class', () => {
+    const wrapper = mount(BaseButton, {
+      props: {
+        label: 'Click Me',
+        theme: 'primary',
+      },
+    })
+
+    expect(wrapper.find('button').classes()).toContain('btn-primary')
+  })
+
+  test('forwards attributes to the native button', () => {
+    const wrapper = mount(BaseButton, {
+      props: {
+        label: 'Save',
+      },
+      attrs: {
+        type: 'submit',
+        disabled: true,
+      },
+    })
+
+    const button = wrapper.find('button')
+    expect(button.attributes('type')).toBe('submit')
+    expect(button.attributes('disabled')).toBeDefined()
+  })
 })
