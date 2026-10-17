@@ -11,6 +11,18 @@ export const localesEN = {
             content: 'Press ESC key or click on ✕ button to close',
         },
         template: 'Project Starter',
+        content: [
+            {
+                title: 'A place to begin',
+                body: 'Use this space to shape an idea into a small, useful first version.',
+                items: ['Pick one clear goal', 'Keep the first step manageable']
+            },
+            {
+                title: 'Room to explore',
+                body: 'Add a new section, try a different layout, or make the page your own.',
+                items: ['Build at your own pace', 'Make each change count']
+            }
+        ],
     },
     second: {
         page: 'Second page',

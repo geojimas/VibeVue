@@ -21,6 +21,7 @@
             </li>
           </ul>
         </div>
+        <PageContent :sections="$tm('home.content')" />
         <BaseModal />
       </div>
     </BaseFade>
@@ -30,6 +31,7 @@
 <script setup>
 import BaseFade from '../components/BaseFade.vue'
 import BaseModal from '../components/BaseModal.vue'
+import PageContent from '../components/PageContent.vue'
 
   const tools = [
     'Vue 3',
