@@ -11,7 +11,7 @@
 
 <script setup>
 import { toRefs, computed } from 'vue'
-import Constants from '../constants/index.js'
+import { AVAILABLE_COLORS, COLOR_VARIANTS } from '../constants/index.js'
 
   defineOptions({
     name: 'BaseButton',
@@ -29,13 +29,12 @@ import Constants from '../constants/index.js'
       type: String,
       default: 'none',
       validator: value =>
-        Constants.AVAILABLE_COLORS.includes(value),
+        AVAILABLE_COLORS.includes(value),
     },
   })
 
   const { label, theme } = toRefs(props)
 
-  const themeClass = computed(() => Constants.COLOR_VARIANTS[theme.value] || '')
+  const themeClass = computed(() => COLOR_VARIANTS[theme.value] || '')
 
 </script>
-
