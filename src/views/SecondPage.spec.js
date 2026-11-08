@@ -1,13 +1,13 @@
-import { describe, expect, test } from 'vitest'
+import { describe, expect, test, vi } from 'vitest'
 
-import { mount } from '@vue/test-utils'
+import { flushPromises, mount } from '@vue/test-utils'
 import { createPinia } from 'pinia'
 import { createI18n } from 'vue-i18n'
 
 import { localesEN } from '../locales/localesEN'
 import SecondPage from './SecondPage.vue'
 
-function mountComponent() {
+async function mountComponent() {
   const pinia = createPinia()
 
   const i18n = createI18n({
@@ -21,35 +21,27 @@ function mountComponent() {
   const wrapper = mount(SecondPage, {
     global: {
       plugins: [pinia, i18n],
-      stubs: {
-        BaseFade: {
-          name: 'BaseFade',
-          template: '<div><slot /></div>',
-        },
-        BaseButton: {
-          name: 'BaseButton',
-          props: ['label'],
-          template: '<button @click="$emit(\'click\')">{{ label }}</button>',
-        },
-      },
     },
   })
+
+  // Wait for the async BaseFade and BaseButton imports to resolve before asserting on the rendered page.
+  await vi.dynamicImportSettled()
 
   return wrapper
 }
 
 describe('SecondPage', () => {
-  test('renders the initial count and double count values', () => {
-    const wrapper = mountComponent()
+  test('renders the initial count and double count values', async () => {
+    const wrapper = await mountComponent()
 
     expect(wrapper.text().replace(/\s+/g, ' ')).toContain('Count : 0')
     expect(wrapper.text().replace(/\s+/g, ' ')).toContain('Double Count : 0')
   })
 
   test('increments the counter and its doubled value', async () => {
-    const wrapper = mountComponent()
+    const wrapper = await mountComponent()
 
-    await wrapper.findComponent({ name: 'BaseButton' }).vm.$emit('click')
+    await wrapper.find('button').trigger('click')
 
     expect(wrapper.text().replace(/\s+/g, ' ')).toContain('Count : 1')
     expect(wrapper.text().replace(/\s+/g, ' ')).toContain('Double Count : 2')

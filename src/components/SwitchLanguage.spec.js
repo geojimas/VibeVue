@@ -2,6 +2,7 @@ import { beforeEach, describe, expect, test } from 'vitest'
 
 import { mount } from '@vue/test-utils'
 import { createI18n } from 'vue-i18n'
+import { AVAILABLE_LANGUAGES } from '../constants/index.js'
 import SwitchLanguage from './SwitchLanguage.vue'
 
 function mountComponent(locale) {
@@ -43,5 +44,21 @@ describe('SwitchLanguage', () => {
     expect(i18n.global.locale.value).toBe('el')
     expect(localStorage.getItem('lang')).toBe('el')
     expect(wrapper.text()).toBe('EN')
+  })
+
+  test('falls back to English when there is no other available language', () => {
+    const availableLanguages = [...AVAILABLE_LANGUAGES]
+
+    AVAILABLE_LANGUAGES.splice(0, AVAILABLE_LANGUAGES.length, 'en')
+
+    try {
+      const { wrapper } = mountComponent('en')
+
+      expect(wrapper.text()).toBe('EN')
+
+      wrapper.unmount()
+    } finally {
+      AVAILABLE_LANGUAGES.splice(0, AVAILABLE_LANGUAGES.length, ...availableLanguages)
+    }
   })
 })
