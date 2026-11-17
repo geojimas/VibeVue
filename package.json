@@ -21,18 +21,18 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.5",
-    "daisyui": "^5.8.0",
+    "daisyui": "^5.8.1",
     "pinia": "^4.1.0",
     "tailwindcss": "^4.3.5",
     "vue": "^3.5.45",
-    "vue-i18n": "^11.4.20",
+    "vue-i18n": "^11.4.22",
     "vue-router": "^5.5.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.11",
     "@vitest/coverage-v8": "^5.1.0",
-    "@vue/test-utils": "^2.5.1",
-    "baseline-browser-mapping": "^2.11.37",
+    "@vue/test-utils": "^2.6.0",
+    "baseline-browser-mapping": "^2.11.38",
     "eslint": "^10.15.0",
     "eslint-plugin-vue": "^10.12.1",
     "globals": "^17.14.0",
