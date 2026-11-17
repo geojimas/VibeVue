@@ -17,6 +17,7 @@ coverage/
 
 # Editor directories and files
 .vscode
+.opencode
 .idea
 .DS_Store
 *.suo

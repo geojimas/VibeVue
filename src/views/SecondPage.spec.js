@@ -1,6 +1,6 @@
 import { describe, expect, test, vi } from 'vitest'
 
-import { flushPromises, mount } from '@vue/test-utils'
+import { mount } from '@vue/test-utils'
 import { createPinia } from 'pinia'
 import { createI18n } from 'vue-i18n'
 
