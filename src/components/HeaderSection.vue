@@ -1,22 +1,24 @@
 <template>
-  <nav class="flex justify-center md:justify-evenly items-center flex-row p-2">
-    <div class="flex gap-6">
-      <RouterLink
-        class="p-1 tracking-wide opacity-70 hover:opacity-90"
-        to="/"
-      >
-        {{ $t('nav.main') }}
-      </RouterLink>
-      <RouterLink
-        class="p-1 tracking-wide opacity-70 hover:opacity-90"
-        to="/about"
-      >
-        {{ $t('nav.second') }}
-      </RouterLink>
-    </div>
-    <div class="flex gap-4">
-      <ThemeToggle class="mx-4" />
-      <SwitchLanguage />
+  <nav class="border-b border-line bg-canvas">
+    <div class="mx-auto flex w-full max-w-4xl flex-wrap items-center justify-between gap-4 px-6 py-4">
+      <div class="flex items-center gap-6">
+        <RouterLink
+          class="app-link font-sans text-sm"
+          to="/"
+        >
+          {{ $t('nav.main') }}
+        </RouterLink>
+        <RouterLink
+          class="app-link font-sans text-sm"
+          to="/about"
+        >
+          {{ $t('nav.second') }}
+        </RouterLink>
+      </div>
+      <div class="flex items-center gap-4">
+        <ThemeToggle />
+        <SwitchLanguage />
+      </div>
     </div>
   </nav>
 </template>
@@ -27,16 +29,4 @@ import { defineAsyncComponent } from 'vue'
 
   const ThemeToggle = defineAsyncComponent(() => import('./ThemeToggle.vue'))
   const SwitchLanguage = defineAsyncComponent(() => import('./SwitchLanguage.vue'))
-
 </script>
-
-
-<style lang="css" scoped>
-  .active-route {
-    text-decoration: underline;
-    text-underline-offset: 17px;
-    text-decoration-thickness: 3px;
-    font-weight: 600;
-    opacity: 1;
-  }
-</style>

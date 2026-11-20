@@ -4,10 +4,47 @@
   themes: light --default, dark;
 }
 
+@layer components {
+  .app-link {
+    color: var(--color-muted);
+    transition: color 150ms ease;
+  }
+
+  .app-link:hover {
+    color: var(--color-ink);
+  }
+
+  .active-route {
+    color: var(--color-brand);
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+  }
+}
+
 @font-face {
   font-family: 'Acme';
   font-style: normal;
   font-weight: 200;
   font-display: swap;
   src: url('https://fonts.gstatic.com/s/acme/v17/RrQfboBx-C5_XxrBbg.woff2') format('woff2');
+}
+
+/* Tailwind CSS v4 directive; not a standard CSS at-rule. */
+/* stylelint-disable-next-line at-rule-no-unknown */
+@theme {
+  --color-canvas: #fafaf9;
+  --color-ink: #1c1e20;
+  --color-muted: #6e7478;
+  --color-line: #e5e7e5;
+  --color-brand: #2e5aac;
+}
+
+[data-theme='dark'] {
+  --color-canvas: #141618;
+  --color-ink: #edecec;
+  --color-muted: #9ba1a4;
+  --color-line: #2c3032;
+  --color-brand: #8fb0ea;
 }

@@ -56,4 +56,11 @@
 .fade-leave-from {
   opacity: 1;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: none;
+  }
+}
 </style>

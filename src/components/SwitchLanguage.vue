@@ -1,17 +1,18 @@
 <template>
-  <BaseButton
-    class="btn btn-dash"
-    :label="nextLanguageLabel"
+  <button
+    type="button"
+    :aria-label="$t('language.switch')"
+    class="font-sans text-sm text-muted transition-colors hover:text-brand"
     @click="toggleLanguage"
-  />
+  >
+    {{ nextLanguageLabel }}
+  </button>
 </template>
 
 <script setup>
 import { useI18n } from 'vue-i18n'
 import { computed } from 'vue'
 import { AVAILABLE_LANGUAGES, LANGUAGES } from '../constants/index.js'
-import BaseButton from './BaseButton.vue'
-
 
   const { locale } = useI18n()
 
@@ -25,5 +26,4 @@ import BaseButton from './BaseButton.vue'
   }
 
   const nextLanguageLabel = computed(() => LANGUAGES[nextLanguage.value.toUpperCase()])
-
 </script>

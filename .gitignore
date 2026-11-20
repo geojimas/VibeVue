@@ -6,6 +6,7 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+skills-lock.json
 
 node_modules
 dist
@@ -18,6 +19,7 @@ coverage/
 # Editor directories and files
 .vscode
 .opencode
+.agents
 .idea
 .DS_Store
 *.suo

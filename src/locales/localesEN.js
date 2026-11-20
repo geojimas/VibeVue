@@ -1,35 +1,53 @@
 export const localesEN = {
+    theme: {
+        toDark: 'Switch to dark mode',
+        toLight: 'Switch to light mode'
+    },
+    language: {
+        switch: 'Switch language'
+    },
     nav: {
         main: 'Home',
         second: 'Store'
     },
     home: {
         page: 'Main page',
+        kicker: 'VibeVue',
+        headlineFirst: 'A clean start for',
+        headlineSecond: 'your next Vue app.',
+        intro: 'Routing, state, translations, tests and a build pipeline, wired up from the first commit.',
+        quickstartLabel: 'Quick start',
+        quickstartCommand: 'npm install && npm run dev',
+        inTheBox: 'Tools',
+        tools: [
+            'Vue 3',
+            'Vue Router',
+            'Pinia',
+            'Vitest',
+            'vue-i18n',
+            'ESLint',
+            'Tailwind CSS',
+            'DaisyUI',
+            'Progressive Web App (PWA) Support',
+            'Search Engine Optimization (SEO)',
+        ],
         modal: {
             header: 'Hello from Modal',
             label: 'Open Modal',
             content: 'Press ESC key or click on ✕ button to close',
         },
         template: 'Project Starter',
-        content: [
-            {
-                title: 'A place to begin',
-                body: 'Use this space to shape an idea into a small, useful first version.',
-                items: ['Pick one clear goal', 'Keep the first step manageable']
-            },
-            {
-                title: 'Room to explore',
-                body: 'Add a new section, try a different layout, or make the page your own.',
-                items: ['Build at your own pace', 'Make each change count']
-            }
-        ],
     },
     second: {
         page: 'Second page',
-        header: 'Interact with Pinia Store',
-        store_click: 'Click here',
+        kicker: 'Pinia store',
+        headlineFirst: 'State that lives',
+        headlineSecond: 'outside the component.',
+        intro: 'This page reads and updates the shared counter store. Add one and both values follow.',
+        addOne: 'Add one',
         counter: 'Count',
-        double_counter: 'Double Count'
+        double_counter: 'Double Count',
+        back: 'Back to home',
     },
     footer: {
         header: 'Copyright',
