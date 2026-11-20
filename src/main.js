@@ -6,11 +6,15 @@ import App from './App.vue'
 import router from './router'
 import { localesEL } from './locales/localesEL'
 import { localesEN } from './locales/localesEN'
+import { useTheme } from './composables/useTheme'
 
 import './assets/base.css'
 
 const app = createApp(App)
 const pinia = createPinia()
+
+// Apply the saved theme before mount so routes without the header (e.g. 404) keep it too.
+useTheme()
 
 const i18n = createI18n({
   legacy: false,

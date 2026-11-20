@@ -1,40 +1,58 @@
 <template>
-  <div class="hero bg-base-200 flex-1 overflow-auto">
+  <div class="flex-1 overflow-auto bg-canvas text-ink">
     <BaseFade
-      :duration="600"
+      :duration="400"
       :appear="true"
-      class="hero-content flex-col lg:flex-row"
     >
-      <div class="card bg-base-100 max-w-88 shadow-sm">
-        <div class="card-body gap-9">
-          <h2 class="card-title flex justify-center text-3xl">
-            {{ $t('second.page') }}
-          </h2>
-          <BaseButton
-            :label="$t('second.store_click')"
-            theme="primary"
-            @click="increment"
-          />
-          <p class="text-xl">
-            {{ $t('second.header') }}
-          </p>
-          <div class="card-actions justify-end">
-            <div class="badge badge-outline badge-error">
-              <span class="text-lg"> {{ $t('second.counter') }} : {{ count }}</span>
-            </div>
-            <div class="badge badge-outline badge-warning">
-              <span class="text-lg">{{ $t('second.double_counter') }} : {{ doubleCount }}</span>
-            </div>
+      <section class="mx-auto w-full max-w-4xl px-6 py-16 sm:py-24">
+        <p class="font-sans text-sm font-medium text-brand">
+          {{ $t('second.kicker') }}
+        </p>
+
+        <h1 class="mt-4 font-sans text-4xl leading-tight font-semibold sm:text-5xl">
+          {{ $t('second.headlineFirst') }}
+          <br>
+          {{ $t('second.headlineSecond') }}
+        </h1>
+
+        <p class="mt-6 max-w-xl font-sans text-base leading-7 text-muted">
+          {{ $t('second.intro') }}
+        </p>
+
+        <div class="mt-10 border-t border-line">
+          <div class="flex items-baseline justify-between gap-4 border-b border-line py-4">
+            <span class="font-sans text-sm text-muted">{{ $t('second.counter') }}</span>
+            <span class="font-sans text-2xl font-semibold tabular-nums">{{ count }}</span>
+          </div>
+          <div class="flex items-baseline justify-between gap-4 border-b border-line py-4">
+            <span class="font-sans text-sm text-muted">{{ $t('second.double_counter') }}</span>
+            <span class="font-sans text-2xl font-semibold tabular-nums">{{ doubleCount }}</span>
           </div>
         </div>
-      </div>
+
+        <BaseButton
+          class="mt-8"
+          :label="$t('second.addOne')"
+          theme="none"
+          @click="increment"
+        />
+
+        <div class="mt-12">
+          <RouterLink
+            class="app-link"
+            to="/"
+          >
+            {{ $t('second.back') }}
+          </RouterLink>
+        </div>
+      </section>
     </BaseFade>
   </div>
 </template>
 
-
 <script setup>
 import { defineAsyncComponent } from 'vue'
+import { RouterLink } from 'vue-router'
 import { storeToRefs } from 'pinia'
 import { useCounterStore } from '../store/counter'
 
@@ -45,5 +63,4 @@ import { useCounterStore } from '../store/counter'
 
   const { count, doubleCount } = storeToRefs(counterStore)
   const { increment } = counterStore
-
 </script>

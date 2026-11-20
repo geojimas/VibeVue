@@ -1,48 +1,51 @@
 <template>
-  <div class="hero min-h-128 bg-base-200 text-base-content flex-1 overflow-auto">
+  <div class="flex-1 overflow-auto bg-canvas text-ink">
     <BaseFade
-      :duration="600"
+      :duration="400"
       :appear="true"
     >
-      <div class="hero-content min-h-80 text-center flex-col">
-        <div class="max-w-md">
-          <h1 class="text-2xl font-bold">
-            {{ $t('home.page') }}
-          </h1>
-          <p class="py-4 text-md">
-            {{ $t('home.template') }}
-          </p>
-          <ul class="flex flex-wrap justify-center items-center py-2 text-md gap-2">
-            <li
-              v-for="(tool, index) in tools"
-              :key="index"
-            >
-              {{ tool }}
-            </li>
-          </ul>
+      <section class="mx-auto w-full max-w-4xl px-6 py-16 sm:py-24">
+        <p class="font-sans text-sm font-medium text-brand">
+          {{ $t('home.kicker') }}
+        </p>
+
+        <h1 class="mt-4 font-sans text-4xl leading-tight font-semibold sm:text-5xl">
+          {{ $t('home.headlineFirst') }}
+          <br>
+          {{ $t('home.headlineSecond') }}
+        </h1>
+
+        <p class="mt-6 max-w-xl font-sans text-base leading-7 text-muted">
+          {{ $t('home.intro') }}
+        </p>
+
+        <div class="mt-8 flex flex-wrap items-baseline gap-x-4 gap-y-2">
+          <span class="font-sans text-sm text-muted">{{ $t('home.quickstartLabel') }}</span>
+          <code class="font-sans text-sm font-medium text-brand">{{ $t('home.quickstartCommand') }}</code>
         </div>
-        <PageContent :sections="$tm('home.content')" />
-        <BaseModal />
-      </div>
+
+        <div class="mt-14 border-t border-line pt-8">
+          <h2 class="font-sans text-sm font-medium text-muted">
+            {{ $t('home.inTheBox') }}
+          </h2>
+          <ToolsList :tools="tools" />
+        </div>
+
+        <div class="mt-12">
+          <BaseModal />
+        </div>
+      </section>
     </BaseFade>
   </div>
 </template>
 
 <script setup>
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import BaseFade from '../components/BaseFade.vue'
 import BaseModal from '../components/BaseModal.vue'
-import PageContent from '../components/PageContent.vue'
+import ToolsList from '../components/ToolsList.vue'
 
-  const tools = [
-    'Vue 3',
-    'Vue Router',
-    'Pinia',
-    'Vitest',
-    'vue-i18n',
-    'ESLint',
-    'Tailwind CSS',
-    'DaisyUI',
-    'Progressive Web App (PWA) Support',
-    'Search Engine Optimization (SEO)',
-  ]
+  const { tm } = useI18n()
+  const tools = computed(() => tm('home.tools'))
 </script>

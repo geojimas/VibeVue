@@ -10,7 +10,7 @@ function mountComponent(locale) {
     legacy: false,
     locale,
     messages: {
-      en: {},
+      en: { language: { switch: 'Switch language' } },
       el: {},
     },
   })

@@ -1,21 +1,19 @@
 <template>
-  <div class="flex cursor-pointer gap-2 items-center">
-    <SunSVG />
-    <label
-      for="toggleTheme"
-      class="sr-only"
-    >Toggle dark mode
-    </label>
-    <input
-      id="toggleTheme"
-      aria-label="Toggle dark mode"
-      type="checkbox"
-      :checked="isDarkTheme"
-      class="toggle toggle-md"
-      @change="toggleTheme"
-    >
-    <MoonSVG />
-  </div>
+  <button
+    type="button"
+    :aria-label="$t(isDarkTheme ? 'theme.toLight' : 'theme.toDark')"
+    class="flex h-8 w-8 items-center justify-center text-muted transition-colors hover:text-brand"
+    @click="toggleTheme"
+  >
+    <SunSVG
+      v-if="!isDarkTheme"
+      class="h-4 w-4"
+    />
+    <MoonSVG
+      v-else
+      class="h-4 w-4"
+    />
+  </button>
 </template>
 
 <script setup>

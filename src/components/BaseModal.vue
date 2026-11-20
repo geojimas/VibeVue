@@ -1,14 +1,15 @@
 <template>
   <BaseButton
     :label="$t('home.modal.label')"
-    theme="info"
+    theme="none"
+    class="border-brand text-brand"
     @click="handleModalClick"
   />
   <dialog
     ref="base_modal"
     class="modal"
   >
-    <div class="modal-box">
+    <div class="modal-box bg-canvas">
       <form method="dialog">
         <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
           <CloseButtonSVG />
@@ -23,6 +24,7 @@
     </div>
   </dialog>
 </template>
+
 
 <script setup>
 import { defineAsyncComponent, useTemplateRef } from 'vue'
