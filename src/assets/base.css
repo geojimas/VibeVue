@@ -4,6 +4,18 @@
   themes: light --default, dark;
 }
 
+@layer base {
+  html {
+    background-color: var(--color-canvas);
+  }
+
+  body {
+    min-height: 100vh;
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+  }
+}
+
 @layer components {
   .app-link {
     color: var(--color-muted);
